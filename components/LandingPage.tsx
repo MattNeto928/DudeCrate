@@ -127,7 +127,7 @@ export function LandingPage() {
               <div className="grid gap-1 transform hover:-translate-y-2 transition-all duration-300 ease-in-out">
                 <h3 className="text-lg font-bold">Exclusive Gear</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Discover unique and exclusive groomsman gear that you won't find anywhere else.
+                  Discover unique and exclusive groomsman gear that you won&apos;t find anywhere else.
                 </p>
               </div>
               <div className="grid gap-1 transform hover:-translate-y-2 transition-all duration-300 ease-in-out">
