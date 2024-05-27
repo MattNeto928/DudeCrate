@@ -32,7 +32,7 @@ export function LandingPage() {
     <div className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center">
         <Link className="flex items-center justify-center" href="#">
-          <MountainIcon className="h-6 w-6" />
+          <MountainIcon />
           <span className="sr-only">Dude Crate</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
@@ -138,8 +138,9 @@ export function LandingPage() {
               <div className="grid gap-1 transform hover:-translate-y-2 transition-all duration-300 ease-in-out">
                 <h3 className="text-lg font-bold">Exclusive Gear</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Discover unique and exclusive groomsman gear that you won't find anywhere else.
+                  Discover unique and exclusive groomsman gear that you won&#39;t find anywhere else.
                 </p>
+
               </div>
               <div className="grid gap-1 transform hover:-translate-y-2 transition-all duration-300 ease-in-out">
                 <h3 className="text-lg font-bold">Surprise & Delight</h3>
@@ -225,13 +226,13 @@ export function LandingPage() {
   )
 }
 
-function MountainIcon(props) {
+function MountainIcon() {
   return (
     <img
-              alt="Hero"
-              height="60"
-              src="/DudeCrateLogo.png"
-              width="60"
-            />
+      alt="Hero"
+      height="60"
+      src="/DudeCrateLogo.png"
+      width="60"
+    />
   )
 }
