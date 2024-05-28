@@ -85,8 +85,8 @@ export function BottleOpener() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container space-y-12 px-4 md:px-6 mx-auto max-w-5xl">
             <div className="flex flex-col items-start space-y-4 text-left">
-              <div className="pb-32 w-full flex items-center justify-center ">
-                <PinContainer
+              <div className=" grid gap-[25vw] sm:grid-cols-1 sm md:grid-cols-2 lg:grid-cols-4 pb-24 w-full items-center justify-center ">
+                <PinContainer className='gap-1'
                   title="Custom Fraternity Bottle Openers"
                   href="www.dudecrate.shop"
                 >
@@ -107,7 +107,7 @@ export function BottleOpener() {
                     />
                   </div>
                 </PinContainer>
-                <PinContainer
+                <PinContainer className='gap-1'
                   title="Custom Fraternity Bottle Openers"
                   href="www.dudecrate.shop"
                 >
@@ -128,7 +128,7 @@ export function BottleOpener() {
                     />
                   </div>
                 </PinContainer>
-                <PinContainer
+                <PinContainer className='gap-1'
                   title="Custom Fraternity Bottle Openers"
                   href="www.dudecrate.shop"
                 >
@@ -149,7 +149,7 @@ export function BottleOpener() {
                     />
                   </div>
                 </PinContainer>
-                <PinContainer
+                <PinContainer className='gap-1'
                   title="Custom Fraternity Bottle Openers"
                   href="www.dudecrate.shop"
                 >
