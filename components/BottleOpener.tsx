@@ -26,6 +26,7 @@ To read more about using these font, please visit the Next.js documentation:
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { PinContainer } from "./ui/3d-pin"
 
 export function BottleOpener() {
   return (
@@ -109,6 +110,92 @@ export function BottleOpener() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container space-y-12 px-4 md:px-6 mx-auto max-w-5xl">
             <div className="flex flex-col items-start space-y-4 text-left">
+              <div className="pb-32 w-full flex items-center justify-center ">
+                <PinContainer
+                  title="Custom Fraternity Bottle Openers"
+                  href="www.dudecrate.shop"
+                >
+                  <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+                    <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+                      TKE
+                    </h3>
+                    <div className="text-base !m-0 !p-0 font-normal">
+                      <span className="text-slate-500 ">
+                        Tau Kapp Epsilon
+                      </span>
+                    </div>
+                    <img
+                      alt="TKE"
+                      className="w-auto mt-10 rounded-xl"
+                      src="/GT.jpeg"
+                      width='45'
+                    />
+                  </div>
+                </PinContainer>
+                <PinContainer
+                  title="Custom Fraternity Bottle Openers"
+                  href="www.dudecrate.shop"
+                >
+                  <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+                    <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+                      TKE
+                    </h3>
+                    <div className="text-base !m-0 !p-0 font-normal">
+                      <span className="text-slate-500 ">
+                        Tau Kapp Epsilon
+                      </span>
+                    </div>
+                    <img
+                      alt="TKE"
+                      className="w-auto mt-10 rounded-xl"
+                      src="/GT.jpeg"
+                      width='45'
+                    />
+                  </div>
+                </PinContainer>
+                <PinContainer
+                  title="Custom Fraternity Bottle Openers"
+                  href="www.dudecrate.shop"
+                >
+                  <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+                    <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+                      TKE
+                    </h3>
+                    <div className="text-base !m-0 !p-0 font-normal">
+                      <span className="text-slate-500 ">
+                        Tau Kapp Epsilon
+                      </span>
+                    </div>
+                    <img
+                      alt="TKE"
+                      className="w-auto mt-10 rounded-xl"
+                      src="/GT.jpeg"
+                      width='45'
+                    />
+                  </div>
+                </PinContainer>
+                <PinContainer
+                  title="Custom Fraternity Bottle Openers"
+                  href="www.dudecrate.shop"
+                >
+                  <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+                    <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+                      TKE
+                    </h3>
+                    <div className="text-base !m-0 !p-0 font-normal">
+                      <span className="text-slate-500 ">
+                        Tau Kapp Epsilon
+                      </span>
+                    </div>
+                    <img
+                      alt="TKE"
+                      className="w-auto mt-10 rounded-xl"
+                      src="/GT.jpeg"
+                      width='45'
+                    />
+                  </div>
+                </PinContainer>
+              </div>
               <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
                 Custom Bottle Openers
               </div>
