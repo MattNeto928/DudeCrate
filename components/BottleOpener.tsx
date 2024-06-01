@@ -2,42 +2,12 @@ import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { PinContainer } from "./ui/3d-pin"
+import { NavBar } from "./NavBar"
 
 export function BottleOpener() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center justify-between">
-        <Link className="flex items-center justify-center" href="#">
-          <BeerIcon />
-          <span className="sr-only">Custom Bottle Opener</span>
-        </Link>
-        <nav className="flex gap-4 sm:gap-6">
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1"
-            href="#"
-          >
-            Bottle Openers
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1"
-            href="#"
-          >
-            Customization
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1"
-            href="#"
-          >
-            About
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1"
-            href="#"
-          >
-            Contact
-          </Link>
-        </nav>
-      </header>
+      <NavBar />
       <main className="flex-1">
         <section className="w-full pt-12 md:pt-24 lg:pt-32 border-y">
           <div className="px-4 md:px-6 space-y-10 xl:space-y-16">
@@ -53,13 +23,13 @@ export function BottleOpener() {
                 <div className="flex flex-col sm:flex-row items-start gap-4">
                   <Link
                     className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 transform hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                    href="#"
+                    href="/customize"
                   >
                     Customize Your Bottle Opener
                   </Link>
                   <Link
                     className="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300 transform hover:-translate-y-1 transition-all duration-300 ease-in-out dark:border-gray-800"
-                    href="#"
+                    href="/bottle-openers"
                   >
                     Shop Bottle Openers
                   </Link>
@@ -224,13 +194,13 @@ export function BottleOpener() {
             <div className="flex flex-col sm:flex-row items-start gap-4 justify-center">
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 transform hover:-translate-y-1 transition-all duration-300 ease-in-out"
-                href="#"
+                href="/customize"
               >
                 Customize Your Bottle Opener
               </Link>
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300 transform hover:-translate-y-1 transition-all duration-300 ease-in-out dark:border-gray-800"
-                href="#"
+                href="/bottle-openers"
               >
                 Shop Bottle Openers
               </Link>
@@ -292,13 +262,3 @@ export function BottleOpener() {
   )
 }
 
-function BeerIcon() {
-  return (
-    <img
-      alt="Hero"
-      className="mx-auto aspect-[5/4] overflow-hidden rounded-t-xl object-cover"
-      src="/DudeCrateLogo.png"
-      width='45'
-    />
-  )
-}
