@@ -3,11 +3,12 @@ import { CardContent, Card } from "@/components/ui/card"
 import { CarouselItem, CarouselContent, CarouselPrevious, CarouselNext, Carousel } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
 import { NavBar } from "./NavBar"
+import { AuthProvider } from "./AuthProvider"
 
 
 export function FeaturedBottleOpeners() {
     return (
-        <div>
+        <AuthProvider>
             <NavBar />
             <div className="flex flex-col items-center justify-center min-h-[100dvh]">
                 <section className="w-full py-12 md:py-24 lg:py-32">
@@ -309,7 +310,7 @@ export function FeaturedBottleOpeners() {
                     </div>
                 </section>
             </div>
-        </div>
+        </AuthProvider>
     )
 }
 

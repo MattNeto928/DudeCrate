@@ -32,7 +32,7 @@ export function LandingPage() {
           </Link>
           <Link
             className="font-taviraj text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1"
-            href="#"
+            href="/about"
           >
             About
           </Link>
