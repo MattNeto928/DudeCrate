@@ -54,14 +54,14 @@ export function AboutPage() {
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Elevating the Everyday</h2>
               <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                At Dude Crate, we believe that the little things in life can make the biggest difference. That's why
-                we're dedicated to finding unique and high-quality products that can help our customers elevate their
+                At Dude Crate, we believe that the little things in life can make the biggest difference. That&apos;s why
+                we&apos;re dedicated to finding unique and high-quality products that can help our customers elevate their
                 everyday experiences.
               </p>
               <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Whether it's a beautifully crafted bottle opener, a state-of-the-art multi-tool, or a delicious craft
+                Whether it&apos;s a beautifully crafted bottle opener, a state-of-the-art multi-tool, or a delicious craft
                 beer, we strive to curate a selection of items that not only serve a practical purpose but also bring a
-                sense of joy and fulfillment to our customers' lives.
+                sense of joy and fulfillment to our customers&apos; lives.
               </p>
             </div>
             <div className="flex justify-center">
