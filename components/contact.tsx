@@ -36,7 +36,7 @@ export function contact() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Get in Touch</h2>
             <p className="text-gray-500 dark:text-gray-400">
-              Have a question or want to work together? Fill out the form below and we\'ll get back to you as soon as
+              Have a question or want to work together? Fill out the form below and we&apos;ll get back to you as soon as
               possible.
             </p>
           </div>

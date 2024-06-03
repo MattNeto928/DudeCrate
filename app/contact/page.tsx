@@ -21,7 +21,7 @@ export default function contact() {
             <div className="text-center space-y-2">
               <h2 className="text-3xl font-bold tracking-tight">Contact Us</h2>
               <p className="text-gray-500 dark:text-gray-400">
-                Have a question or want to work together? Fill out the form below and we\'ll get back to you as soon as
+                Have a question or want to work together? Fill out the form below and we&apos;ll get back to you as soon as
                 possible.
               </p>
             </div>
