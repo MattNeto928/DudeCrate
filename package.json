@@ -1,5 +1,6 @@
 {
   "name": "dude-crate",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,6 +19,7 @@
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.1.3",
     "framer-motion": "^11.2.6",
+    "gapi": "^0.0.3",
     "gapi-script": "^1.2.0",
     "lucide-react": "^0.379.0",
     "next": "^14.2.3",

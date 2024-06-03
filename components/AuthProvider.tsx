@@ -3,6 +3,9 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { gapi } from 'gapi-script'; // Assuming you are using gapi for Google Sign-In
 
+import { useRouter } from 'next/router'
+import ErrorPage from 'next/error'
+
 interface AuthProviderProps {
   children: ReactNode;
 }
@@ -20,6 +23,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   useEffect(() => {
     const initAuth = () => {
+      // Ensure gapi is available on the client side
       gapi.load('auth2', () => {
         const auth2 = gapi.auth2.init({
           client_id: '229259974112-1de9qiggh25q2jkjgubjr7d04mf16qe7.apps.googleusercontent.com',
@@ -33,6 +37,15 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
     initAuth();
   }, []);
+
+  if (typeof window === 'undefined') {
+    // If rendering on the server, return null or some placeholder
+    return null;
+  }
+
+  if (!children) {
+    return <ErrorPage statusCode={404} />
+  }
 
   return (
     <AuthContext.Provider value={{ isSignedIn, user }}>

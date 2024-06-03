@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 import { Rubik } from 'next/font/google'
 import { Taviraj } from 'next/font/google'
+
+import './globals.css';
 
 const taviraj = Taviraj({
   weight: ['400', '700'],
@@ -16,7 +17,7 @@ const rubik = Rubik({
   display: 'swap',
   variable: '--font-rubik'
 })
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Dude Crate",
   description: "Discover the ultimate curation of premium groomsman tools and accessories tailored for the modern man. Elevate your groomsman duties with Dude Crate.",
 };

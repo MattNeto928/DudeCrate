@@ -1,10 +1,19 @@
-import React from 'react';
-import { GoogleLogin, GoogleLoginResponse, GoogleLoginResponseOffline } from 'react-google-login';
-
-const CLIENT_ID = '229259974112-1de9qiggh25q2jkjgubjr7d04mf16qe7.apps.googleusercontent.com';
+import React, { useEffect, useState } from 'react';
 
 const GoogleSignIn: React.FC = () => {
-  const onSuccess = (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
+  const [GoogleLogin, setGoogleLogin] = useState<any>(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      import('react-google-login').then((module) => {
+        setGoogleLogin(module.GoogleLogin);
+      });
+    }
+  }, []);
+
+  const CLIENT_ID = '229259974112-1de9qiggh25q2jkjgubjr7d04mf16qe7.apps.googleusercontent.com';
+
+  const onSuccess = (response: any) => {
     if ('profileObj' in response) {
       console.log('Login Success: currentUser:', response.profileObj);
       // Handle successful login here
@@ -20,14 +29,16 @@ const GoogleSignIn: React.FC = () => {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <GoogleLogin
-        clientId={CLIENT_ID}
-        buttonText="Login"
-        onSuccess={onSuccess}
-        onFailure={onFailure}
-        cookiePolicy={'single_host_origin'}
-        isSignedIn={true}
-      />
+      {GoogleLogin && (
+        <GoogleLogin
+          clientId={CLIENT_ID}
+          buttonText="Login"
+          onSuccess={onSuccess}
+          onFailure={onFailure}
+          cookiePolicy={'single_host_origin'}
+          isSignedIn={true}
+        />
+      )}
     </div>
   );
 };
