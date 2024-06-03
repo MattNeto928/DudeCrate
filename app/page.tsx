@@ -3,9 +3,12 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { PinContainer } from "@/components/ui/3d-pin"
 import { NavBar } from "@/components/NavBar"
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const App = () => {
   return (
+
+    <GoogleOAuthProvider clientId="229259974112-1de9qiggh25q2jkjgubjr7d04mf16qe7.apps.googleusercontent.com">
       <div className="flex flex-col min-h-[100dvh]">
         <NavBar />
         <main className="flex-1">
@@ -259,6 +262,7 @@ const App = () => {
           </nav>
         </footer>
       </div>
+    </GoogleOAuthProvider>
   )
 }
 
