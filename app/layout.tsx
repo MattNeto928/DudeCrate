@@ -5,6 +5,10 @@ import { Taviraj } from 'next/font/google'
 
 import './globals.css';
 
+//contact
+import { Libre_Franklin } from 'next/font/google'
+import { Chivo } from 'next/font/google'
+
 const taviraj = Taviraj({
   weight: ['400', '700'],
   subsets: ['latin'],
@@ -34,3 +38,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+//contact

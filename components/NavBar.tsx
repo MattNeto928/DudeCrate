@@ -75,7 +75,7 @@ export function NavBar() {
             About
           </div>
         </Link>
-        <Link href="#" passHref>
+        <Link href="/contact" passHref>
           <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
             Contact
           </div>
