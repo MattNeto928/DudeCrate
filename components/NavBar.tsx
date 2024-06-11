@@ -20,6 +20,9 @@ export function NavBar() {
   const login = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
+      options: {
+        redirectTo: 'https://www.dudecrate.shop/'
+      }
 
     });
 
