@@ -84,9 +84,43 @@ export function NavBar() {
             Home
           </div>
         </Link>
+<<<<<<< HEAD
         <Link href="/bottle-openers" passHref>
           <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
             Bottle Openers
+=======
+        <nav className="flex gap-4 sm:gap-6">
+          <Link href="/" passHref>
+            <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+              Home
+            </div>
+          </Link>
+          <Link href="/bottle-openers" passHref>
+            <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+              Bottle Openers
+            </div>
+          </Link>
+          <Link href="/custom" passHref>
+            <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+              Customization
+            </div>
+          </Link>
+          <Link href="/about" passHref>
+            <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+              About
+            </div>
+          </Link>
+          <Link href="/contact" passHref>
+            <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+              Contact
+            </div>
+          </Link>
+        </nav>
+        {email ? ( // If email exists
+          <div className='flex gap-6'>
+            {profileImage && <img className='rounded-full h-8' src={profileImage} alt="Profile" />} {/* Show profile image if available */}
+            <button onClick={logout}>Sign out</button> {/* Sign-out button */}
+>>>>>>> 5b49d54 (Updated)
           </div>
         </Link>
         <Link href="#" passHref>
