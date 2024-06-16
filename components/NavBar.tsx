@@ -72,23 +72,12 @@ export function NavBar() {
       <header className="px-4 lg:px-6 h-14 flex items-center justify-between">
         <script src="https://accounts.google.com/gsi/client" async defer></script>
 
-      <Link href="/" passHref>
-        <div className="flex items-center justify-center">
-          <DudeCrateIcon />
-          <span className="sr-only">Custom Bottle Opener</span>
-        </div>
-      </Link>
-      <nav className="flex gap-4 sm:gap-6">
         <Link href="/" passHref>
-          <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-            Home
+          <div className="flex items-center justify-center">
+            <DudeCrateIcon />
+            <span className="sr-only">Custom Bottle Opener</span>
           </div>
         </Link>
-<<<<<<< HEAD
-        <Link href="/bottle-openers" passHref>
-          <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-            Bottle Openers
-=======
         <nav className="flex gap-4 sm:gap-6">
           <Link href="/" passHref>
             <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
@@ -120,48 +109,11 @@ export function NavBar() {
           <div className='flex gap-6'>
             {profileImage && <img className='rounded-full h-8' src={profileImage} alt="Profile" />} {/* Show profile image if available */}
             <button onClick={logout}>Sign out</button> {/* Sign-out button */}
->>>>>>> 5b49d54 (Updated)
           </div>
-        </Link>
-        <Link href="#" passHref>
-          <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-            Customization
-          </div>
-        </Link>
-        <Link href="/about" passHref>
-          <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-            About
-          </div>
-        </Link>
-        <Link href="/contact" passHref>
-          <div className="text-sm font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-            Contact
-          </div>
-        </Link>
-      </nav>
-
-      {isSignedIn && user ? (
-        // Display user profile picture if signed in
-        <div className="flex items-center gap-2">
-          <img
-            src={user.picture}
-            alt={user.name}
-            className="h-8 w-8 rounded-full"
-          />
-          <button onClick={handleSignOut} className="text-sm font-medium text-gray-700 hover:text-gray-900">
-            Sign Out
-          </button>
-        </div>
-      ) : (
-        // Display sign-in button if not signed in
-        <GoogleLogin
-          onSuccess={handleSignIn}
-          onError={() => {
-            console.log('Login Failed');
-          }}
-        />
-      )}
-    </header>
+        ) : (
+          <button onClick={login}>Sign in with Google</button>
+        )}
+      </header>
     </GoogleOAuthProvider>
   );
 }
