@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useRef, useEffect } from "react";
 import { NavBar } from "@/components/NavBar";
@@ -101,9 +101,9 @@ export default function Component() {
               <img src={image} alt="Uploaded" className="mt-4 rounded-lg shadow-lg" style={{ maxWidth: "100%", maxHeight: "400px" }} />
             )}
           </div>
-          <div className="lg:col-span-1">
-            <BackgroundGradient className="h-80 rounded-[22px] bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-              <Scene url="/BottleOpener.gltf" scale={70} imageScale={100} textureUrl={textureUrl} /> {/* Pass textureUrl here */}
+          <div>
+            <BackgroundGradient className="col-span-1 h-80 rounded-[22px] bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+              <Scene url="/BottleOpener.gltf" scale={60} textureUrl={textureUrl} /> {/* Pass textureUrl here */}
             </BackgroundGradient>
             <div className="text-center mt-6 text-lg font-semibold">
               Preview
