@@ -18,7 +18,7 @@ const RotatingModel: React.FC<ModelProps> = ({ url, scale = 1, textureUrl, uploa
 
   // Material properties
   const material = new THREE.MeshPhongMaterial({
-    color: 0x888888, // Base color
+    color: '#737373', // Base color
     specular: 0xFFFFFF,
     shininess: 50,
     map: new THREE.TextureLoader().load(uploadedTextureUrl || textureUrl || "/fallbackTexture.png"), // Use uploadedTextureUrl if available, else textureUrl, else fallback
@@ -38,8 +38,8 @@ const RotatingModel: React.FC<ModelProps> = ({ url, scale = 1, textureUrl, uploa
 
   useFrame(() => {
     if (modelRef.current) {
-      modelRef.current.rotation.y = mouseX * Math.PI * 0.25;
-      modelRef.current.rotation.x = mouseY * Math.PI * 0.25;
+      modelRef.current.rotation.y = mouseX * Math.PI * 0.06;
+      modelRef.current.rotation.x = mouseY * Math.PI * 0.06;
     }
   });
 
@@ -57,12 +57,14 @@ const RotatingModel: React.FC<ModelProps> = ({ url, scale = 1, textureUrl, uploa
 
 const Scene: React.FC<ModelProps> = ({ url, scale, textureUrl, uploadedTextureUrl }) => {
   return (
+
     <Canvas>
-      <ambientLight intensity={1.2} />
-      <pointLight position={[0, 0, 10]} />
+      <ambientLight intensity={5} />
+      <pointLight position={[0, 0, 5]} />
       <OrbitControls enableZoom={false} enablePan={false} />
       <RotatingModel url={url} scale={scale} textureUrl={textureUrl} uploadedTextureUrl={uploadedTextureUrl} />
     </Canvas>
+
   );
 };
 
