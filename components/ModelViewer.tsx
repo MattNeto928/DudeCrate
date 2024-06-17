@@ -6,10 +6,11 @@ import * as THREE from 'three';
 type ModelProps = {
   url: string;
   scale?: number;
-  textureUrl: string; // New prop for texture URL
+  textureUrl?: string; // Updated to be optional
+  uploadedTextureUrl?: string; // New prop for uploaded image URL
 };
 
-const RotatingModel: React.FC<ModelProps> = ({ url, scale = 1, textureUrl }) => {
+const RotatingModel: React.FC<ModelProps> = ({ url, scale = 1, textureUrl, uploadedTextureUrl }) => {
   const gltf = useGLTF(url);
   const modelRef = useRef<THREE.Group>(null!);
   const [mouseX, setMouseX] = useState(0);
@@ -20,7 +21,7 @@ const RotatingModel: React.FC<ModelProps> = ({ url, scale = 1, textureUrl }) => 
     color: 0x888888, // Base color
     specular: 0xFFFFFF,
     shininess: 50,
-    map: new THREE.TextureLoader().load(textureUrl), // Load texture
+    map: new THREE.TextureLoader().load(uploadedTextureUrl || textureUrl || "/fallbackTexture.png"), // Use uploadedTextureUrl if available, else textureUrl, else fallback
   });
 
   useEffect(() => {
@@ -54,13 +55,13 @@ const RotatingModel: React.FC<ModelProps> = ({ url, scale = 1, textureUrl }) => 
   );
 };
 
-const Scene: React.FC<ModelProps> = ({ url, scale, textureUrl }) => {
+const Scene: React.FC<ModelProps> = ({ url, scale, textureUrl, uploadedTextureUrl }) => {
   return (
     <Canvas>
       <ambientLight intensity={1.2} />
       <pointLight position={[0, 0, 10]} />
       <OrbitControls enableZoom={false} enablePan={false} />
-      <RotatingModel url={url} scale={scale} textureUrl={textureUrl} />
+      <RotatingModel url={url} scale={scale} textureUrl={textureUrl} uploadedTextureUrl={uploadedTextureUrl} />
     </Canvas>
   );
 };

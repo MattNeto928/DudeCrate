@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { NavBar } from "@/components/NavBar";
-
 import dynamic from 'next/dynamic';
 const Scene = dynamic(() => import('@/components/ModelViewer'), { ssr: false });
 
@@ -56,7 +55,9 @@ export default function Component() {
       <NavBar />
 
       <div style={{ width: '100vw', height: '100vh' }}>
-        <Scene url="/BottleOpener.gltf" scale={50} textureUrl="BottleOpener3d.png" /> {/* Adjust the scale value as needed */}      </div>
+        <Scene url="/BottleOpener.gltf" scale={50} textureUrl="BottleOpener3d.png" uploadedTextureUrl={image || undefined} /> {/* Pass uploadedTextureUrl */}
+      </div>
+
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6 lg:grid lg:grid-cols-2 lg:gap-12">
           <div className="space-y-4">
@@ -86,41 +87,7 @@ export default function Component() {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
-            <img
-              src={image || "/placeholder.svg"}
-              width={300}
-              height={400}
-              alt="Custom Image 1"
-              className="mx-auto aspect-[3/4] overflow-hidden rounded-xl object-cover object-center grayscale"
-            />
-            <img
-              src={silhouette || image || "/placeholder.svg"}
-              width={300}
-              height={400}
-              alt="Custom Image 2"
-              className="mx-auto aspect-[3/4] overflow-hidden rounded-xl object-cover object-center"
-            />
-            <img
-              src={image || "/placeholder.svg"}
-              width={300}
-              height={400}
-              alt="Custom Image 3"
-              className="mx-auto aspect-[3/4] overflow-hidden rounded-xl object-cover object-center"
-            />
-            <img
-              src={image || "/placeholder.svg"}
-              width={300}
-              height={400}
-              alt="Custom Image 4"
-              className="mx-auto aspect-[3/4] overflow-hidden rounded-xl object-cover object-center"
-            />
-            <img
-              src={image || "/placeholder.svg"}
-              width={300}
-              height={400}
-              alt="Custom Image 5"
-              className="mx-auto aspect-[3/4] overflow-hidden rounded-xl object-cover object-center"
-            />
+            {/* Render your custom images here */}
           </div>
         </div>
       </section>
