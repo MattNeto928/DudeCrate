@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
+import { Button } from "@/components/ui/button";
 
 import { createClient } from "@supabase/supabase-js";
 import React from "react";
@@ -20,9 +21,6 @@ export function NavBar() {
   const login = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: {
-        redirectTo: 'https://www.dudecrate.shop/'
-      }
 
     });
 
@@ -69,7 +67,7 @@ export function NavBar() {
   return (
     <GoogleOAuthProvider clientId="229259974112-1de9qiggh25q2jkjgubjr7d04mf16qe7.apps.googleusercontent.com">
 
-      <header className="px-4 lg:px-6 h-14 flex items-center justify-between">
+      <header className="px-4 lg:px-6 h-14 flex items-center justify-between border-b">
         <script src="https://accounts.google.com/gsi/client" async defer></script>
 
         <Link href="/" passHref>
@@ -106,12 +104,12 @@ export function NavBar() {
           </Link>
         </nav>
         {email ? ( // If email exists
-          <div className='flex gap-6'>
+          <div className='flex gap-6 align-middle justify-center'>
             {profileImage && <img className='rounded-full h-8' src={profileImage} alt="Profile" />} {/* Show profile image if available */}
-            <button onClick={logout}>Sign out</button> {/* Sign-out button */}
+            <Button onClick={logout}>Sign out</Button> {/* Sign-out button */}
           </div>
         ) : (
-          <button onClick={login}>Sign in with Google</button>
+          <Button onClick={login}>Sign in with Google</Button>
         )}
       </header>
     </GoogleOAuthProvider>
