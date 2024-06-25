@@ -105,11 +105,19 @@ export function NavBar() {
         </nav>
         {email ? ( // If email exists
           <div className='flex gap-6 align-middle justify-center'>
+            <button >
+              <img className='h-8' src={"/image.png"} alt="AddToCart" />
+            </button>
             {profileImage && <img className='rounded-full h-8' src={profileImage} alt="Profile" />} {/* Show profile image if available */}
             <Button onClick={logout}>Sign out</Button> {/* Sign-out button */}
           </div>
         ) : (
-          <Button onClick={login}>Sign in with Google</Button>
+          <div className="flex gap-8">
+            <button onClick={login}>
+              <img className='h-8' src={"/image.png"} alt="AddToCart" />
+            </button>
+            <Button onClick={login}>Sign in with Google</Button>
+          </div>
         )}
       </header>
     </GoogleOAuthProvider>
