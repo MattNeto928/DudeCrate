@@ -1,10 +1,17 @@
-import Link from "next/link"
-import { CardContent, Card } from "@/components/ui/card"
-import { CarouselItem, CarouselContent, CarouselPrevious, CarouselNext, Carousel } from "@/components/ui/carousel"
-import { Button } from "@/components/ui/button"
-import { NavBar } from "@/components/NavBar"
+import React from "react";
+import Link from "next/link";
+import { CardContent, Card } from "@/components/ui/card";
+import { CarouselItem, CarouselContent, CarouselPrevious, CarouselNext, Carousel } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+import { NavBar } from "@/components/NavBar";
 
-const CollectionCarousel = ({ title, items, collectionType }) => (
+interface CollectionCarouselProps {
+  title: string;
+  items: string[];
+  collectionType: string;
+}
+
+const CollectionCarousel: React.FC<CollectionCarouselProps> = ({ title, items, collectionType }) => (
   <div>
     <div className="flex flex-col items-start space-y-4 text-left">
       <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">{title}</div>
@@ -49,10 +56,16 @@ const CollectionCarousel = ({ title, items, collectionType }) => (
       </Link>
     </div>
   </div>
-)
+);
 
-const CollectionsCarousel = () => {
-  const collections = [
+interface Collection {
+  title: string;
+  items: string[];
+  type: string;
+}
+
+const CollectionsCarousel: React.FC = () => {
+  const collections: Collection[] = [
     {
       title: "NBA Teams",
       items: ["Chicago Bulls", "Los Angeles Lakers", "Golden State Warriors", "Boston Celtics"],
@@ -83,7 +96,7 @@ const CollectionsCarousel = () => {
       items: ["Sigma Chi", "Kappa Alpha Psi", "Phi Delta Theta", "Sigma Alpha Epsilon"],
       type: "fraternities"
     }
-  ]
+  ];
 
   return (
     <div>
@@ -92,10 +105,10 @@ const CollectionsCarousel = () => {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container space-y-12 px-4 md:px-6 mx-auto max-w-5xl">
             {collections.map((collection, index) => (
-              <CollectionCarousel 
-                key={index} 
-                title={collection.title} 
-                items={collection.items} 
+              <CollectionCarousel
+                key={index}
+                title={collection.title}
+                items={collection.items}
                 collectionType={collection.type}
               />
             ))}
@@ -103,7 +116,7 @@ const CollectionsCarousel = () => {
         </section>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CollectionsCarousel
+export default CollectionsCarousel;
