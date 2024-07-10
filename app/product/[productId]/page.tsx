@@ -63,7 +63,7 @@ export default function ProductDetail({ params }: { params: { productId: string 
               <div className="flex justify-center">
                 <BackgroundGradient className="h-80 w-80 rounded-[22px] bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
                   {product.imageUrl &&
-                    <Scene url="/BottleOpener.gltf" scale={60} textureUrl={product.imageUrl} />
+                    <Scene url="/BottleOpener.gltf" scale={60} textureUrl={product.imageUrl} productId={product.id}/>
                   }
                 </BackgroundGradient>
               </div>
